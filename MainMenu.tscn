@@ -1,0 +1,45 @@
+[gd_scene load_steps=2 format=3 uid="uid://iqu6k5vfr4uw"]
+
+[ext_resource type="Script" path="res://MainMenu.gd" id="3"]
+
+[node name="Base" type="Node2D"]
+script = ExtResource("3")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 58.0
+offset_top = 40.0
+offset_right = -52.0
+offset_bottom = -42.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer/MarginContainer"]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/MarginContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_stretch_ratio = 4.03
+
+[node name="Label" type="Label" parent="CanvasLayer/MarginContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+text = "Game"
+
+[node name="MenuOptions" type="VBoxContainer" parent="CanvasLayer/MarginContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+alignment = 1
+
+[node name="StartGame" type="Button" parent="CanvasLayer/MarginContainer/HBoxContainer/VBoxContainer/MenuOptions"]
+layout_mode = 2
+text = "New Game"
+
+[node name="Options" type="Button" parent="CanvasLayer/MarginContainer/HBoxContainer/VBoxContainer/MenuOptions"]
+layout_mode = 2
+text = "Options"
+
+[connection signal="pressed" from="CanvasLayer/MarginContainer/HBoxContainer/VBoxContainer/MenuOptions/StartGame" to="." method="_on_start_game_pressed"]
