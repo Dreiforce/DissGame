@@ -1,9 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://diono4b2isc4j"]
+[gd_scene load_steps=3 format=3 uid="uid://diono4b2isc4j"]
 
 [ext_resource type="Script" path="res://scenes/GameScene.gd" id="1_3i13s"]
 [ext_resource type="PackedScene" uid="uid://c64mm3mkg4puu" path="res://scenes/GameGUI.tscn" id="1_gf2xx"]
 [ext_resource type="PackedScene" uid="uid://dtnb1a270xmko" path="res://scenes/PauseMenuGUI.tscn" id="3_rnc2s"]
-[ext_resource type="PackedScene" uid="uid://bkmgc81bfnrnb" path="res://character.tscn" id="2_kowij"]
 
 [node name="Base" type="Node2D"]
 script = ExtResource("1_3i13s")
@@ -21,4 +20,3 @@ offset_bottom = -231.0
 
 [node name="MainNode" type="Node2D" parent="."]
 
-[node name="CharacterBody2D" parent="MainNode" instance=ExtResource("2_kowij")]
