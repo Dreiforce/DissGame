@@ -2,7 +2,11 @@
 
 importer="texture"
 type="CompressedTexture2D"
+<<<<<<< HEAD
 uid="uid://bhgkffdscny6w"
+=======
+uid="uid://cqkt3aa3dja1e"
+>>>>>>> 41a11ff (delete old character)
 path="res://.godot/imported/Full Sprite Sheet+Jump.png-f7948edef1ee15b5c6536a6f6be77bdc.ctex"
 metadata={
 "vram_texture": false
