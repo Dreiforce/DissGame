@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://diono4b2isc4j"]
+
+[ext_resource type="PackedScene" uid="uid://c64mm3mkg4puu" path="res://scenes/GameGUI.tscn" id="1_gf2xx"]
+
+[node name="Base" type="Node2D"]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="GameGUI" parent="CanvasLayer" instance=ExtResource("1_gf2xx")]
+
+[node name="MainNode" type="Node2D" parent="."]
