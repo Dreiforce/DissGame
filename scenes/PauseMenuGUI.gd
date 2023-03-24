@@ -11,14 +11,17 @@ func _ready():
 func _process(delta):
 	pass
 
+func togglePause():
+	if get_tree().paused:
+		unpause()
+	else:
+		pause()
+
 func _on_continue_pressed():
 	unpause()
-	continue_pressed.emit()
-
 
 func _on_exit_pressed():
-	unpause()
-	exit_pressed.emit()
+	exit()
 
 func pause():
 	show()
@@ -27,5 +30,9 @@ func pause():
 func unpause():
 	hide()
 	get_tree().paused = false
+	continue_pressed.emit()
 
-
+func exit():
+	hide()
+	get_tree().paused = false
+	exit_pressed.emit()

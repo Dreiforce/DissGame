@@ -2,8 +2,8 @@
 
 [ext_resource type="Script" path="res://scenes/GameScene.gd" id="1_3i13s"]
 [ext_resource type="PackedScene" uid="uid://c64mm3mkg4puu" path="res://scenes/GameGUI.tscn" id="1_gf2xx"]
-[ext_resource type="PackedScene" path="res://scenes/PauseMenuGUI.tscn" id="3_rnc2s"]
-[ext_resource type="PackedScene" uid="uid://cyuhtu4nvapoq" path="res://scenes/character.tscn" id="4_2q4r0"]
+[ext_resource type="PackedScene" uid="uid://dtnb1a270xmko" path="res://scenes/PauseMenuGUI.tscn" id="3_rnc2s"]
+[ext_resource type="PackedScene" path="res://scenes/character.tscn" id="4_2q4r0"]
 [ext_resource type="Texture2D" uid="uid://bklbkoihktgv6" path="res://resources/character/frog.png" id="5_2yukg"]
 [ext_resource type="Script" path="res://scenes/character.gd" id="5_xgtwy"]
 
@@ -113,13 +113,16 @@ animations = [{
 size = Vector2(16, 13)
 
 [node name="Base" type="Node2D"]
+process_mode = 3
 script = ExtResource("1_3i13s")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="GameGUI" parent="CanvasLayer" instance=ExtResource("1_gf2xx")]
+process_mode = 1
 
 [node name="PauseMenuGUI" parent="CanvasLayer" instance=ExtResource("3_rnc2s")]
+process_mode = 2
 visible = false
 offset_left = 404.0
 offset_top = 235.0
@@ -127,6 +130,7 @@ offset_right = -418.0
 offset_bottom = -231.0
 
 [node name="MainNode" type="Node2D" parent="."]
+process_mode = 1
 
 [node name="CharacterBody2D" parent="MainNode" instance=ExtResource("4_2q4r0")]
 script = ExtResource("5_xgtwy")

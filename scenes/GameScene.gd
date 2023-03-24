@@ -13,8 +13,8 @@ func _process(delta):
 
 
 func _input(event):
-	if Input.is_action_pressed("ui_cancel"):
-		pauseMenu.pause()
+	if Input.is_action_just_pressed("ui_cancel"):
+		pauseMenu.togglePause()
 
 func exit_game():
 	get_tree().change_scene_to_file("res://MainMenu.tscn")
