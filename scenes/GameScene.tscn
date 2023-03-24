@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://dojiq8cedav6t" path="res://resources/backgroundShapes.png" id="4_3s5he"]
 [ext_resource type="Texture2D" uid="uid://5re8hcdumykd" path="res://resources/backgroundColor.png" id="5_8su57"]
 [ext_resource type="PackedScene" uid="uid://dbm5gt4xaqfs6" path="res://scenes/Level1.tscn" id="5_h034i"]
+[ext_resource type="Script" path="res://scenes/character.gd" id="5_xgtwy"]
 
 [node name="Base" type="Node2D"]
 process_mode = 3
@@ -51,5 +52,6 @@ region_rect = Rect2(0, 0, 1920, 1080)
 
 [node name="CharacterBody2D" parent="MainNode" instance=ExtResource("4_2q4r0")]
 position = Vector2(65, 264)
+script = ExtResource("5_xgtwy")
 
 [node name="Node2D" parent="MainNode" instance=ExtResource("5_h034i")]
