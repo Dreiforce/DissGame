@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://cyuhtu4nvapoq"]
+[gd_scene load_steps=15 format=3 uid="uid://cyuhtu4nvapoq"]
 
 [ext_resource type="Texture2D" uid="uid://bklbkoihktgv6" path="res://resources/character/frog.png" id="1_26q17"]
 
@@ -9,10 +9,6 @@ region = Rect2(0, 128, 16, 16)
 [sub_resource type="AtlasTexture" id="AtlasTexture_5nuax"]
 atlas = ExtResource("1_26q17")
 region = Rect2(16, 128, 16, 16)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_7r3k0"]
-atlas = ExtResource("1_26q17")
-region = Rect2(112, 128, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_gyvpb"]
 atlas = ExtResource("1_26q17")
@@ -65,9 +61,6 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_7r3k0")
-}, {
-"duration": 1.0,
 "texture": SubResource("AtlasTexture_gyvpb")
 }],
 "loop": true,
@@ -111,7 +104,7 @@ size = Vector2(16, 13)
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_v7ntw")
-animation = &"idle"
+animation = &"jump"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, 1.5)
