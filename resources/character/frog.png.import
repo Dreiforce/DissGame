@@ -2,20 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-<<<<<<< HEAD
-uid="uid://bhgkffdscny6w"
-=======
-uid="uid://cqkt3aa3dja1e"
->>>>>>> 41a11ff (delete old character)
-path="res://.godot/imported/Full Sprite Sheet+Jump.png-f7948edef1ee15b5c6536a6f6be77bdc.ctex"
+uid="uid://bklbkoihktgv6"
+path="res://.godot/imported/frog.png-ab7fb85582a5618a91d8a6167d456c6a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://resources/charcter/Full Sprite Sheet+Jump.png"
-dest_files=["res://.godot/imported/Full Sprite Sheet+Jump.png-f7948edef1ee15b5c6536a6f6be77bdc.ctex"]
+source_file="res://resources/charcter/frog.png"
+dest_files=["res://.godot/imported/frog.png-ab7fb85582a5618a91d8a6167d456c6a.ctex"]
 
 [params]
 
