@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=3 uid="uid://jtmnfl28o6vv"]
+[gd_scene load_steps=6 format=3 uid="uid://c7a1eiy51croi"]
 
 [ext_resource type="Texture2D" uid="uid://dqni8d6hjjjy2" path="res://resources/power_up.png" id="1_heu1b"]
 [ext_resource type="Script" path="res://scenes/PowerUp.gd" id="1_uwmja"]

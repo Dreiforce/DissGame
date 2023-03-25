@@ -30,6 +30,10 @@ func _process(delta):
 	pass
 
 
+func decrease_skill(skill):
+	update_skill(skill, dict_skill_to_bar[skill].value - 1)
+
+
 func update_skill(skill: String, value: int):
 	dict_skill_to_val[skill] = value
 	dict_skill_to_bar[skill].value = value

@@ -1,5 +1,6 @@
 extends Area2D
 
+signal on_entered
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -13,3 +14,5 @@ func _process(delta):
 
 func _on_body_entered(body):
 	hide()
+	on_entered.emit()
+	$CollisionShape2D.set_deferred("disabled", true)
