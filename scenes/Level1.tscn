@@ -1,7 +1,9 @@
-[gd_scene load_steps=5 format=3 uid="uid://dnlc7baf1dtu6"]
+[gd_scene load_steps=7 format=3 uid="uid://dnlc7baf1dtu6"]
 
 [ext_resource type="Texture2D" uid="uid://j5o502kf8jhn" path="res://resources/TileSet.png" id="1_x3bnl"]
 [ext_resource type="Texture2D" uid="uid://b2j3j8dsg1a01" path="res://scenes/OLt_72.png" id="2_a5ikn"]
+[ext_resource type="PackedScene" path="res://scenes/mob.tscn" id="3_03wyj"]
+[ext_resource type="PackedScene" uid="uid://c7a1eiy51croi" path="res://scenes/PowerUp.tscn" id="4_f431f"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_sljw5"]
 resource_name = "Terrain"
@@ -558,3 +560,14 @@ modulate = Color(1, 1, 1, 0.443137)
 position = Vector2(617.003, 328.188)
 scale = Vector2(0.448725, 0.534687)
 texture = ExtResource("2_a5ikn")
+
+[node name="Mob" parent="." instance=ExtResource("3_03wyj")]
+position = Vector2(381, 215)
+
+[node name="PowerUps" type="Node" parent="."]
+
+[node name="PowerUp" parent="PowerUps" instance=ExtResource("4_f431f")]
+position = Vector2(326, 214)
+
+[node name="PowerUp2" parent="PowerUps" instance=ExtResource("4_f431f")]
+position = Vector2(156, 294)

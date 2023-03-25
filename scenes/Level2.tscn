@@ -1,6 +1,7 @@
-[gd_scene load_steps=5 format=3 uid="uid://m3w8eotev8ae"]
+[gd_scene load_steps=6 format=3 uid="uid://m3w8eotev8ae"]
 
 [ext_resource type="Texture2D" uid="uid://j5o502kf8jhn" path="res://resources/TileSet.png" id="1_4gbf4"]
+[ext_resource type="Script" path="res://scenes/Level2.gd" id="1_4h3bj"]
 [ext_resource type="Texture2D" uid="uid://b2j3j8dsg1a01" path="res://scenes/OLt_72.png" id="2_ajyub"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_sljw5"]
@@ -537,7 +538,8 @@ custom_data_layer_0/name = ""
 custom_data_layer_0/type = 0
 sources/0 = SubResource("TileSetAtlasSource_sljw5")
 
-[node name="Node2D" type="Node2D"]
+[node name="Level2" type="Node2D"]
+script = ExtResource("1_4h3bj")
 
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = SubResource("TileSet_pgjmi")
@@ -558,3 +560,6 @@ modulate = Color(1, 1, 1, 0.443137)
 position = Vector2(617.003, 328.188)
 scale = Vector2(0.448725, 0.534687)
 texture = ExtResource("2_ajyub")
+
+[node name="Position2D" type="Node2D" parent="."]
+position = Vector2(65, 264)

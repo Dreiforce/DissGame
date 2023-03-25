@@ -8,6 +8,10 @@ const JUMP_VELOCITY = -400.0
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 
+func _ready():
+	SignalManager.change_player_pos.connect(adjustPos)
+
+
 func _physics_process(_delta):
 	# Add the gravity.
 	change_animation()
@@ -45,3 +49,5 @@ func change_animation():
 		else:
 			$AnimatedSprite2D.play("idle")
 
+func adjustPos(globPos):
+	set_deferred("global_position", globPos)

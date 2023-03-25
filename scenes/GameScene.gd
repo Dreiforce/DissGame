@@ -3,16 +3,13 @@ extends Node2D
 @onready var pauseMenu = $CanvasLayer/PauseMenuGUI
 @onready var gameOverMenu = $CanvasLayer/GameOverMenuGUI
 @onready var mainPlayer = $MainNode/MainPlayer
-@onready var powerUps = $MainNode/Node
 @onready var HUD = $CanvasLayer/GameGUI
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	pauseMenu.exit_pressed.connect(exit_game)
 	gameOverMenu.exit_pressed.connect(exit_game)
-	
-	for child in powerUps.get_children():
-		child.on_entered.connect(hit)
+	SignalManager.player_hit.connect(hit)
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
