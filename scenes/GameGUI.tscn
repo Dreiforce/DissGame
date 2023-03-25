@@ -1,4 +1,8 @@
-[gd_scene format=3 uid="uid://c64mm3mkg4puu"]
+[gd_scene load_steps=4 format=3 uid="uid://c64mm3mkg4puu"]
+
+[ext_resource type="Texture2D" uid="uid://dyb8w3ibpvrue" path="res://resources/under.png" id="1_0pwss"]
+[ext_resource type="Script" path="res://scenes/GameGUI.gd" id="1_pmmup"]
+[ext_resource type="Texture2D" uid="uid://sr22xd66af2x" path="res://resources/progress.png" id="3_qyyt4"]
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -7,52 +11,55 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_pmmup")
 
-[node name="HBoxContainer" type="HBoxContainer" parent="."]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
+[node name="GridContainer" type="GridContainer" parent="."]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 10.0
+offset_right = 634.0
+offset_bottom = 210.0
+columns = 2
 
-[node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer"]
+[node name="SPDLabel" type="Label" parent="GridContainer"]
 layout_mode = 2
-size_flags_horizontal = 0
+text = "SPD"
 
-[node name="MarginContainer" type="MarginContainer" parent="HBoxContainer/VBoxContainer"]
+[node name="SPDProgressBar" type="TextureProgressBar" parent="GridContainer"]
 layout_mode = 2
+max_value = 5.0
+texture_under = ExtResource("1_0pwss")
+texture_progress = ExtResource("3_qyyt4")
 
-[node name="MarginContainer2" type="MarginContainer" parent="HBoxContainer/VBoxContainer"]
+[node name="JMPLabel" type="Label" parent="GridContainer"]
 layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
+text = "JMP"
 
-[node name="MarginContainer3" type="MarginContainer" parent="HBoxContainer/VBoxContainer"]
+[node name="JMPProgressBar" type="TextureProgressBar" parent="GridContainer"]
 layout_mode = 2
+max_value = 5.0
+value = 4.0
+texture_under = ExtResource("1_0pwss")
+texture_progress = ExtResource("3_qyyt4")
 
-[node name="TestButton1" type="Button" parent="HBoxContainer/VBoxContainer/MarginContainer3"]
+[node name="INTLabel" type="Label" parent="GridContainer"]
 layout_mode = 2
-text = "Test1"
+text = "INT"
 
-[node name="VBoxContainer2" type="VBoxContainer" parent="HBoxContainer"]
+[node name="INTProgressBar" type="TextureProgressBar" parent="GridContainer"]
 layout_mode = 2
-size_flags_horizontal = 3
+max_value = 5.0
+value = 4.0
+texture_under = ExtResource("1_0pwss")
+texture_progress = ExtResource("3_qyyt4")
 
-[node name="VBoxContainer3" type="VBoxContainer" parent="HBoxContainer"]
+[node name="STRLabel" type="Label" parent="GridContainer"]
 layout_mode = 2
+text = "STR"
 
-[node name="MarginContainer" type="MarginContainer" parent="HBoxContainer/VBoxContainer3"]
+[node name="STRProgressBar" type="TextureProgressBar" parent="GridContainer"]
 layout_mode = 2
-
-[node name="MarginContainer2" type="MarginContainer" parent="HBoxContainer/VBoxContainer3"]
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-
-[node name="MarginContainer3" type="MarginContainer" parent="HBoxContainer/VBoxContainer3"]
-layout_mode = 2
-
-[node name="TestButton2" type="Button" parent="HBoxContainer/VBoxContainer3/MarginContainer3"]
-layout_mode = 2
-text = "Test2"
+max_value = 5.0
+value = 4.0
+texture_under = ExtResource("1_0pwss")
+texture_progress = ExtResource("3_qyyt4")
