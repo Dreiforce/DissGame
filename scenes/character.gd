@@ -1,5 +1,7 @@
 extends CharacterBody2D
 
+signal hit
+
 const SPEED = 100.0
 const JUMP_VELOCITY = -400.0
 

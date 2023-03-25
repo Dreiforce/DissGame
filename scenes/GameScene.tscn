@@ -1,15 +1,16 @@
-[gd_scene load_steps=10 format=3 uid="uid://diono4b2isc4j"]
+[gd_scene load_steps=12 format=3 uid="uid://diono4b2isc4j"]
 
 [ext_resource type="Script" path="res://scenes/GameScene.gd" id="1_3i13s"]
 [ext_resource type="PackedScene" uid="uid://c64mm3mkg4puu" path="res://scenes/GameGUI.tscn" id="1_gf2xx"]
 [ext_resource type="PackedScene" path="res://scenes/PauseMenuGUI.tscn" id="3_rnc2s"]
 [ext_resource type="PackedScene" uid="uid://cyuhtu4nvapoq" path="res://scenes/character.tscn" id="4_2q4r0"]
 [ext_resource type="Texture2D" uid="uid://dojiq8cedav6t" path="res://resources/backgroundShapes.png" id="4_3s5he"]
-[ext_resource type="PackedScene" uid="uid://wmj7vybrc7wa" path="res://scenes/GameOverMenuGUI.tscn" id="4_obpj2"]
+[ext_resource type="PackedScene" path="res://scenes/GameOverMenuGUI.tscn" id="4_obpj2"]
 [ext_resource type="Texture2D" uid="uid://5re8hcdumykd" path="res://resources/backgroundColor.png" id="5_8su57"]
 [ext_resource type="PackedScene" uid="uid://dnlc7baf1dtu6" path="res://scenes/Level1.tscn" id="5_h034i"]
 [ext_resource type="Script" path="res://scenes/character.gd" id="5_xgtwy"]
 [ext_resource type="PackedScene" uid="uid://jtmnfl28o6vv" path="res://scenes/PowerUp.tscn" id="9_aidw5"]
+[ext_resource type="PackedScene" uid="uid://ccumvipoqegyn" path="res://scenes/mob.tscn" id="11_i7evx"]
 
 [node name="Base" type="Node2D"]
 process_mode = 3
@@ -69,5 +70,8 @@ script = ExtResource("5_xgtwy")
 
 [node name="Node2D" parent="MainNode" instance=ExtResource("5_h034i")]
 
-[node name="Area2D" parent="MainNode" instance=ExtResource("9_aidw5")]
+[node name="PowerUp" parent="MainNode" instance=ExtResource("9_aidw5")]
 position = Vector2(326, 214)
+
+[node name="Mob" parent="MainNode" instance=ExtResource("11_i7evx")]
+position = Vector2(381, 215)
