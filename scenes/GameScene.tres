@@ -1,4 +1,4 @@
-[gd_resource type="VisualShader" load_steps=9 format=3 uid="uid://cna5nbw1kt0kf"]
+[gd_resource type="VisualShader" load_steps=9 format=3 uid="uid://bygy5jxcmdi6v"]
 
 [ext_resource type="Texture2D" uid="uid://5re8hcdumykd" path="res://resources/backgroundColor.png" id="1_mkigo"]
 
@@ -71,7 +71,6 @@ void fragment() {
 
 }
 "
-graph_offset = Vector2(216.172, 193.879)
 mode = 1
 flags/light_only = false
 nodes/fragment/0/position = Vector2(1220, 240)
